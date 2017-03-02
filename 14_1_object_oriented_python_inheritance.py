@@ -11,15 +11,18 @@ class PartyAnimal:
         print "So far", self.x
 
 
+class FootballFan(PartyAnimal):
+    points = 0
+
+    def touchdown(self):
+        self.points = self.points + 1
+        self.party()
+        print self.points, "points"
+
+
 s = PartyAnimal("Sally")
 s.party()
-s.party()
-s.party()
-PartyAnimal.party(s)
-print "Type", type(s)
-print "Dir", dir(s)
 
-j = PartyAnimal("Jim")
+j = FootballFan("Jim")
 j.party()
-s.party()
-s.party()
+j.touchdown()
