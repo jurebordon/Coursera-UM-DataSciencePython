@@ -1,28 +1,32 @@
 import re
+import os
 
-fh = open('C:/Users/jureb/Documents/Dropbox/MyProjects/PythonCoursera/mbox-short.txt','r')
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, 'files/mbox-short.txt')
 
+
+fh = open(filename,'r')
 text = fh.read()
 
 for line in fh:
 	line = line.rstrip()
-	if re.search('^X-\S+',line):
+	if re.search('^X-\S+', line):
 		print line
 
 
 x = "My 2 favorite numbers are 19 and 42"
-y = re.findall('[0-9]+',x) # returns python list
+y = re.findall('[0-9]+', x) # returns python list
 print y
 
 y = re.findall('[M]+\S', x)
 print y
 
 x = "From: Using the : character"
-y = re.findall('^F.+:',x) #greedy, takes biggest
+y = re.findall('^F.+:', x) #greedy, takes biggest
 print y
 
 x = "From: Using the : character"
-y = re.findall('^F.+?:',x) #non - greedy, takes first matching
+y = re.findall('^F.+?:', x) #non - greedy, takes first matching
 print y
 
 #print text

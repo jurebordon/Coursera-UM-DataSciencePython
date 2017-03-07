@@ -1,6 +1,9 @@
-#fname = raw_input("Enter file name: ")
-#fhandler = open(fname, 'r')
-fhandler = open('F:/downloads/mbox-short.txt','r')
+import os
+
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, 'files/mbox-short.txt')
+
+fhandler = open(filename)
 
 cnt = 0
 

@@ -1,7 +1,9 @@
-#name = raw_input("Enter file:")
-#if len(name) < 1 : name = "mbox-short.txt"
-#fhandler = open(name,'r')
-fhandler = open('C:/Users/jureb/Documents/Dropbox/MyProjects/PythonCoursera/mbox-short.txt','r')
+import os
+
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, 'files/mbox-short.txt')
+
+fhandler = open(filename)
 counts = dict()
 
 top_commiter = None

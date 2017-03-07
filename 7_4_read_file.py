@@ -1,4 +1,8 @@
-fhandle = open('F:/downloads/romeo.txt','r')
+import os
+
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, 'files/romeo.txt')
+fhandle = open(filename)
 lst = list()
 
 for line in fhandle:

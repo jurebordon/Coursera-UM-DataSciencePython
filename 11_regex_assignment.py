@@ -1,6 +1,11 @@
 import re
+import os
 
-fh = open("C:/Users/jureb/Documents/Dropbox/MyProjects/PythonCoursera/11_regex_sum_42.txt")
+dir = os.path.dirname(__file__)
+filename = os.path.join(dir, 'files/11_regex_sum_42.txt')
+
+
+fh = open(filename)
 
 text_test = fh.read()
 
@@ -9,7 +14,8 @@ print sum(map(int, numbers_test))
 
 fh.close()
 
-fh = open("C:/Users/jureb/Documents/Dropbox/MyProjects/PythonCoursera/11_regex_sum_345842.txt")
+filename = os.path.join(dir, 'files/11_regex_sum_345842.txt')
+fh = open(filename)
 
 text = fh.read()
 
