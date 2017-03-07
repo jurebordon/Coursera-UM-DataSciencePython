@@ -102,4 +102,4 @@ for entry in all:
         (title, album_id, genre_id, len, rating, count)
         VALUES ( ?, ?, ?, ?, ?, ? )''', (name, album_id, genre_id, length, rating, count))
 
-    conn.commit()
+conn.commit()
